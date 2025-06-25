@@ -8,10 +8,16 @@
         //- acima de 1500: aumento de 5 %
     
     //Entrada
-
+    const num = Number(prompt("Informe o preço do produto"));
 
     //Processamento
+    let n1 = (num >= 280) * (0.2)
+    let n2 = (num >= 700) * (0.15)
+    let n3 =  (num >= 1500) * (1) 
 
+    (num <= 280)
+    ? alert(n1) : alert(n2)
+    : alert(n3);
     
     //Saída
 
