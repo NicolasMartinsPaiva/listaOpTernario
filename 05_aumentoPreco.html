@@ -8,17 +8,18 @@
         //- acima de 1500: aumento de 5 %
     
     //Entrada
-    const num = Number(prompt("Informe o preço do produto"));
+    const preco = Number(prompt("Informe o preço do produto: "));
 
     //Processamento
-    let n1 = (num >= 280) * (0.2)
-    let n2 = (num >= 700) * (0.15)
-    let n3 =  (num >= 1500) * (1) 
 
-    (num <= 280)
-    ? alert(n1) : alert(n2)
-    : alert(n3);
-    
+    (!Number(preco)) ?
+        alert("Preço inválido!") :
+        alert(`O novo preço do produto é R$${(
+            preco <= 280 ? preco * 1.20 :
+            preco <= 700 ? preco * 1.15 :
+            preco <= 1500 ? preco * 1.10 :
+            preco * 1.05
+        ).toFixed(2)}`);
     //Saída
 
 </script>

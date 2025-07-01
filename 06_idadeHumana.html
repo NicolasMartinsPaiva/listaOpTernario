@@ -9,17 +9,23 @@
 
       //Entrada
 
-    const idadeCao = Number(prompt(`Informe quantos anos seu cão em anos humanos`));
+    const idadeCao = Number(prompt(`Informe quantos anos seu cão tem: `));
     const porte = prompt(`Informe qual o porte do seu cão (pequeno, medio ou grande.)`).toLowerCase();
+
+
       //Processamento
 
-
-    (porte === pequeno)
-    ? alert(`A idade do seu cão é de ${(idadeCao * 5)}.`)
-    (porte === medio)
-    : alert(`A idade do seu cão é de ${(idadeCao * 6)}.`); : alert(`A idade do seu cão é de ${(idadeCao * 7)}.`);
-
+  let idadeH = 0;
+  
+    (porte === `pequeno`) ?    idadeH = idadeCao * 5
+    :
+    (porte === `medio`) ?    idadeH = idadeCao * 6
+    :
+    (porte === `grande`) ?    idadeH = idadeCao * 7
+    : 
+    alert("Porte inválido!");
 
       //Saída
+alert(`A idade do seu cão é de ${idadeH}.`);
 
 </script>
